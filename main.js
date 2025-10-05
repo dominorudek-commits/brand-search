@@ -1,90 +1,105 @@
-// List of supported brands (you can add or remove as needed)
-const supportedBrands = [
-  "Acne Studios", "Adidas", "Amazon", "Apple", "Arc’teryx", "Argos", "Balenciaga", "Bape",
-  "Best Buy", "Best Secret", "Boots", "Broken Planet Market", "Bulgari", "Burberry", 
-  "Canada Goose", "Cartier", "Chanel", "Cettire", "Chrome Hearts", "Chrono24", "Corteiz",
-  "Currys", "Culture Kings", "De Bijenkorf", "Denim Tears", "Dior", "Dover Street Market",
-  "Dyson", "eBay", "eBay Authentication", "End", "Farfetch", "Flannels", "Flight Club",
-  "Frasers", "Gallery Dept", "Goat", "Grailed", "Gucci", "Harrods", "Hermès", "JD",
-  "John Lewis", "Legit App", "LuisaViaRoma", "Louis Vuitton", "Loro Piana", "Maison Margiela",
-  "Moncler", "Mr Porter", "Neiman Marcus", "Nike", "Nordstrom", "Off-White", "Offspring",
-  "PacSun", "Pop Mart", "Prada", "Ralph Lauren", "Rick Owens", "Saint Laurent", "Saks Fifth Avenue",
-  "Samsung", "Selfridges", "Sephora", "Sneakersnstuff", "Snkrs", "Snkrs – Got ‘Em", "Sp5der",
-  "SSENSE", "Stadium Goods", "Stanley", "StockX", "Supreme", "Syna World", "Trapstar", "UGG",
-  "Vinted Verification", "Vivienne Westwood", "Xerjoff", "Yeezy Gap", "Zalando"
-];
+<section class="ezy__numbers7 light">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-md-9">
+        <h1 class="ezy__numbers7-heading mb-4">Lorem ipsum, dolor sit amet consectetur</h1>
+        <p class="ezy__numbers7-sub-heading">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quod perferendis nihil cupiditate aliquid
+          qui exercitationem labore veritatis eaque nobis libero earum.
+        </p>
+      </div>
+    </div>
+    <div class="row text-center mt-5">
+      <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <h3 class="mb-3">141</h3>
+        <h5>Completed Event</h5>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <h3 class="mb-3">17k</h3>
+        <h5>Game Completed</h5>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <h3 class="mb-3">641</h3>
+        <h5>Completed Fund</h5>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+        <h3 class="mb-3">54</h3>
+        <h5>Completed Ticket</h5>
+      </div>
+    </div>
+  </div>
+</section>
 
-// Function to create the search interface
-function createBrandSearch() {
-  const container = document.createElement("div");
-  container.style.textAlign = "center";
-  container.style.padding = "30px";
-  container.style.backgroundColor = "#16162D";
-  container.style.borderRadius = "16px";
-  container.style.color = "#fff";
-  container.style.fontFamily = "Inter, sans-serif";
+<style>
+.ezy__numbers7 {
+  --bs-body-color: #262e3b;
+  --bs-body-bg: rgb(255, 255, 255);
 
-  const title = document.createElement("h2");
-  title.innerText = "Check if your brand is supported";
-  title.style.color = "#9A47FF";
-  title.style.marginBottom = "20px";
+  /* Easy Frontend variables */
+  --ezy-theme-color: rgb(13, 110, 253);
+  --ezy-theme-color-rgb: 13, 110, 253;
 
-  const input = document.createElement("input");
-  input.type = "text";
-  input.placeholder = "Enter a brand name...";
-  input.style.padding = "10px 15px";
-  input.style.borderRadius = "8px";
-  input.style.border = "none";
-  input.style.width = "250px";
-  input.style.marginRight = "10px";
-  input.style.outline = "none";
-  input.style.background = "#1f1f3d";
-  input.style.color = "#fff";
-
-  const button = document.createElement("button");
-  button.innerText = "Search";
-  button.style.padding = "10px 15px";
-  button.style.border = "none";
-  button.style.borderRadius = "8px";
-  button.style.backgroundColor = "#9A47FF";
-  button.style.color = "#fff";
-  button.style.cursor = "pointer";
-
-  const result = document.createElement("p");
-  result.style.marginTop = "20px";
-  result.style.fontSize = "18px";
-
-  button.onclick = () => {
-    const query = input.value.trim().toLowerCase();
-    if (!query) {
-      result.innerText = "Please enter a brand name.";
-      result.style.color = "#ccc";
-      return;
-    }
-
-    const found = supportedBrands.some(
-      brand => brand.toLowerCase() === query
-    );
-
-    if (found) {
-      result.innerText = "✅ This brand is supported!";
-      result.style.color = "#4caf50";
-    } else {
-      result.innerText = "❌ No store found for this brand.";
-      result.style.color = "#f44336";
-    }
-  };
-
-  container.appendChild(title);
-  container.appendChild(input);
-  container.appendChild(button);
-  container.appendChild(result);
-
-  // Add the search component to the page
-  document.addEventListener("DOMContentLoaded", () => {
-    document.body.appendChild(container);
-  });
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  padding: 80px 0;
 }
 
-// Initialize the component
-createBrandSearch();
+@media (min-width: 768px) {
+  .ezy__numbers7 {
+    padding: 120px 0;
+  }
+}
+
+/* Gray Block Style */
+.gray .ezy__numbers7,
+.ezy__numbers7.gray {
+  /* Bootstrap variables */
+  --bs-body-bg: rgb(246, 246, 246);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .ezy__numbers7,
+.ezy__numbers7.dark-gray {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(30, 39, 53);
+}
+
+/* Dark Block Style */
+.dark .ezy__numbers7,
+.ezy__numbers7.dark {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(11, 23, 39);
+}
+
+.ezy__numbers7-heading {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .ezy__numbers7-heading {
+    font-size: 45px;
+  }
+}
+
+.ezy__numbers7-sub-heading {
+  font-size: 18px;
+  line-height: 30px;
+  opacity: 0.8;
+}
+
+.ezy__numbers7 h3 {
+  font-size: 45px;
+  font-weight: 900;
+  color: var(--ezy-theme-color);
+}
+
+.ezy__numbers7 h5 {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+</style>
